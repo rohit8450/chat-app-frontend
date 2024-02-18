@@ -9,7 +9,7 @@ import closeIcon from "../../images/closeIcon.png";
 
 let socket;
 
-const ENDPOINT = "https://chat-app-backend-z62q.onrender.com";
+const ENDPOINT = "https://chat-app-backend-1ao8.onrender.com/";
 
 const Chat = () => {
   const [id, setid] = useState("");
@@ -60,7 +60,7 @@ const Chat = () => {
     // Fetch messages from the database on component mount
     const fetchMessages = async () => {
       try {
-        const response = await fetch("https://chat-app-backend-z62q.onrender.com/messages");
+        const response = await fetch("https://chat-app-backend-1ao8.onrender.com/messages");
         const data = await response.json();
         setMessages((prevMessages) => [...prevMessages, ...data]);
       } catch (error) {
